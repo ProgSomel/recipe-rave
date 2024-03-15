@@ -1,3 +1,4 @@
+/* eslint-disable */
 /** @type {import('tailwindcss').Config} */
 
 export default {
@@ -8,6 +9,6 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [import("daisyui")],
+  plugins: [require("daisyui")],
 }
 
