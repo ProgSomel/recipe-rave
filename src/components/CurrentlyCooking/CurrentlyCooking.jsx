@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 
 
-const WantToCook = ({wantToCook, handleCurrentlyCooking}) => {
-    const {recipe_id, recipe_name, preparing_time, calories} = wantToCook;
-
+const CurrentlyCooking = ({currentlyCooking}) => {
+    const {recipe_id, recipe_name, preparing_time, calories} = currentlyCooking;
     return (
+        <div>
+        <div className="overflow-x-hidden font-light">
+<table className="">
+{/* head */}
 
-        <div className=''>
-            <div className="overflow-x-hidden font-light">
-  <table className="">
-    {/* head */}
-   
-    <tbody>
+<tbody>
       {/* row 1 */}
       <tr className='flex items-center  mt-5'>
         <tr className='flex items-center gap-4 justify-start'>
@@ -27,17 +25,16 @@ const WantToCook = ({wantToCook, handleCurrentlyCooking}) => {
       </tr>
       
     </tbody>
-  </table>
+</table>
 </div>
-        </div>
+    </div>
     );
 };
 
 
-WantToCook.propTypes = {
-wantToCook: PropTypes.object.isRequired,
-handleCurrentlyCooking: PropTypes.func.isRequired,
+CurrentlyCooking.propTypes = {
+    currentlyCooking: PropTypes.object
 };
 
 
-export default WantToCook;
+export default CurrentlyCooking;
