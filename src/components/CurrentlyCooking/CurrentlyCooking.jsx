@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 
 const CurrentlyCooking = ({currentlyCooking}) => {
-    const {recipe_id, recipe_name, preparing_time, calories} = currentlyCooking;
+    const { recipe_name, preparing_time, calories} = currentlyCooking;
     return (
         <div>
         <div className="overflow-x-hidden font-light">
@@ -18,9 +18,7 @@ const CurrentlyCooking = ({currentlyCooking}) => {
         <td>{preparing_time} Minutes</td>
         <td>{calories} Calories</td>
         </tr>
-        <tr>
-            <td><button onClick={()=>handleCurrentlyCooking(recipe_id)} className='bg-[#0BE58A] rounded-full px-2'>Preparing</button></td>
-        </tr>
+       
         
       </tr>
       
