@@ -1,0 +1,91 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Spicy Chicken Stir Fry",
+      "recipe_image": "https://i.postimg.cc/g0vCDt3r/spicy-chicken-stir-fry.jpg",
+      "short_description": "A fiery stir-fry bursting with flavors!",
+      "ingredients": [
+        "550 g chicken",
+        "120 ml soy sauce",
+        "200 g basil leaves",
+        "400 g mushrooms"
+      ],
+      "preparing_time": 30,
+      "calories": 320
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Creamy Tomato Basil Pasta",
+      "recipe_image": "https://i.postimg.cc/B61fFZM9/creamy-tomato-basil-pasta.jpg",
+      "short_description": "A comforting pasta dish with a creamy tomato sauce.",
+      "ingredients": [
+        "400 g pasta",
+        "500 g cherry tomatoes",
+        "200 ml heavy cream",
+        "100 g fresh basil leaves"
+      ],
+      "preparing_time": 25,
+      "calories": 380
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Mango Avocado Salad",
+      "recipe_image": "https://i.postimg.cc/g0RSpw07/mango-avocado-salad.jpg",
+      "short_description": "A refreshing salad with a tropical twist.",
+      "ingredients": [
+        "2 ripe mangoes",
+        "2 ripe avocados",
+        "100 g mixed greens",
+        "50 g red onion",
+        "100 g cherry tomatoes"
+      ],
+      "preparing_time": 15,
+      "calories": 250
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Grilled Salmon with Lemon Herb Butter",
+      "recipe_image": "https://i.postimg.cc/90PJ7s9Y/grilled-salmon.jpg",
+      "short_description": "Juicy grilled salmon topped with aromatic herb butter.",
+      "ingredients": [
+        "4 salmon fillets",
+        "100 g unsalted butter",
+        "1 lemon",
+        "2 cloves garlic",
+        "50 g fresh parsley"
+      ],
+      "preparing_time": 20,
+      "calories": 300
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Vegetable Pad Thai",
+      "recipe_image": "https://i.postimg.cc/d04Bw8Y4/vegetable-pad-thai.jpg",
+      "short_description": "A classic Thai noodle dish packed with veggies and flavor.",
+      "ingredients": [
+        "200 g rice noodles",
+        "150 g tofu",
+        "1 carrot",
+        "1 bell pepper",
+        "100 g bean sprouts"
+      ],
+      "preparing_time": 35,
+      "calories": 280
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Classic Chocolate Chip Cookies",
+      "recipe_image": "https://i.postimg.cc/sgK6gFPY/chocolate-chip-cookies.jpg",
+      "short_description": "Homemade cookies filled with gooey chocolate chips.",
+      "ingredients": [
+        "200 g all-purpose flour",
+        "150 g unsalted butter",
+        "150 g brown sugar",
+        "100 g white sugar",
+        "150 g chocolate chips"
+      ],
+      "preparing_time": 12,
+      "calories": 150
+    }
+  ]
+  
