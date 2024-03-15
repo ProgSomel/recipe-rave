@@ -6,7 +6,7 @@ const OurRecipe = ({ recipe }) => {
 
   return (
     <div>
-      <div className="card h-[700px]  bg-base-100 shadow-xl">
+      <div className="card h-[700px]  bg-base-100 shadow-xl border-2">
        <div className="h-[350px] p-5">
        <figure>
           <img className="rounded-lg h-full"

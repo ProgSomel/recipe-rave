@@ -25,15 +25,30 @@ function App() {
           everyone.{" "}
         </p>
 
-        <div className="all-contanier">
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div className="flex gap-10">
+          <div className=" lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-2 mt-8">
             {
               recipes.map(recipe=> <OurRecipe key={recipe.id} recipe={recipe}></OurRecipe>)
             }
           </div>
-          <div className="lg:w-1/2">
-            <div className="want-to-cook"></div>
-            <div className="currently-cooking"></div>
+          <div className="lg:w-[35%] my-8 p-8 border rounded-xl">
+            <div className="want-to-cook text-center">
+              <h1 className=" border-b-2 text-2xl font-bold ">Want to cook: </h1>
+             <div className="flex mt-2 justify-center items-center gap-10 font-light">
+             <p>Name</p>
+              <p>Time</p>
+              <p>Calories</p>
+             </div>
+              
+            </div>
+            <div className="currently-cooking mt-8 font-light">
+            <h1 className=" border-b-2 text-2xl font-bold ">Currently Cooking: </h1>
+             <div className="flex mt-2 justify-center items-center gap-10">
+             <p>Name</p>
+              <p>Time</p>
+              <p>Calories</p>
+             </div>
+            </div>
           </div>
         </div>
       </div>
