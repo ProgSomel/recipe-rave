@@ -24,7 +24,7 @@ function App() {
       (item) => item.recipe_id === id
     );
     if (itemFromWantToCook) {
-      toast.error('Already Added to Want to Cook!', {
+      toast.error(`${itemFromWantToCook.recipe_name} Already Added to Want to Cook!`, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -39,6 +39,17 @@ function App() {
       const item = recipes.find((value) => value.recipe_id === id);
       const newWantToCook = [...wantToCooks, item];
       setWantToCooks(newWantToCook);
+      toast.success(`${item.recipe_name} Added to the Want to Cook`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
     }
   };
 
