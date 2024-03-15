@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { CiTimer } from "react-icons/ci";
 import { MdOutlineEnergySavingsLeaf } from "react-icons/md";
-const OurRecipe = ({ recipe }) => {
-    const {recipe_name, short_description, ingredients, preparing_time, calories, recipe_image} = recipe;
+const OurRecipe = ({ recipe, handleWantToCook }) => {
+    const {recipe_id, recipe_name, short_description, ingredients, preparing_time, calories, recipe_image} = recipe;
 
   return (
     <div>
@@ -35,7 +35,7 @@ const OurRecipe = ({ recipe }) => {
           </div>
           </div>
           <div className="card-actions mt-3">
-            <button className="btn bg-orange-300 hover:bg-green-300 w-full">Want to Cook</button>
+            <button onClick={()=> handleWantToCook(recipe_id)} className="btn bg-orange-300 hover:bg-green-300 w-full">Want to Cook</button>
           </div>
         </div>
       </div>
@@ -45,6 +45,7 @@ const OurRecipe = ({ recipe }) => {
 
 OurRecipe.propTypes = {
   recipe: PropTypes.object,
+  handleWantToCook: PropTypes.func
 };
 
 export default OurRecipe;
