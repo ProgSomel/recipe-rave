@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 
-const CurrentlyCooking = ({currentlyCooking}) => {
+const CurrentlyCooking = ({currentlyCooking, idx}) => {
     const { recipe_name, preparing_time, calories} = currentlyCooking;
     return (
         <div>
@@ -13,11 +13,12 @@ const CurrentlyCooking = ({currentlyCooking}) => {
       {/* row 1 */}
       <tr className='flex items-center  mt-5'>
         <tr className='flex items-center gap-4 justify-start'>
-        <th>{}</th>
+        <th>{idx+1}</th>
         <td>{recipe_name}</td>
         <td>{preparing_time} Minutes</td>
         <td>{calories} Calories</td>
         </tr>
+        
        
         
       </tr>
@@ -31,7 +32,8 @@ const CurrentlyCooking = ({currentlyCooking}) => {
 
 
 CurrentlyCooking.propTypes = {
-    currentlyCooking: PropTypes.object
+    currentlyCooking: PropTypes.object,
+    idx: PropTypes.number
 };
 
 

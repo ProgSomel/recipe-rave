@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 
 
-const WantToCook = ({wantToCook, handleCurrentlyCooking}) => {
+const WantToCook = ({wantToCook, handleCurrentlyCooking, index}) => {
     const {recipe_id, recipe_name, preparing_time, calories} = wantToCook;
+
 
     return (
 
@@ -13,9 +14,9 @@ const WantToCook = ({wantToCook, handleCurrentlyCooking}) => {
    
     <tbody>
       {/* row 1 */}
-      <tr className='flex items-center  mt-5'>
+      <tr className='flex flex-col md:flex-row items-center  mt-5'>
         <tr className='flex items-center gap-4 justify-start'>
-        <th>{}</th>
+        <th>{index+1}</th>
         <td>{recipe_name}</td>
         <td>{preparing_time} Minutes</td>
         <td>{calories} Calories</td>
@@ -37,6 +38,7 @@ const WantToCook = ({wantToCook, handleCurrentlyCooking}) => {
 WantToCook.propTypes = {
 wantToCook: PropTypes.object.isRequired,
 handleCurrentlyCooking: PropTypes.func.isRequired,
+index: PropTypes.number
 };
 
 

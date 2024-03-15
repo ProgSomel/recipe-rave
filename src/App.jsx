@@ -11,6 +11,8 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [wantToCooks, setWantToCooks] = useState([]);
   const [currentlyCookings, setCurrentlyCookings] = useState([]);
+  const [totalTimes, setTotalTimes] = useState(0);
+  const [totalCalories, setTotalCalories] = useState(0);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -35,7 +37,6 @@ function App() {
         });
     } else {
       const item = recipes.find((value) => value.recipe_id === id);
-
       const newWantToCook = [...wantToCooks, item];
       setWantToCooks(newWantToCook);
     }
@@ -46,6 +47,12 @@ function App() {
     const newCurrentlyCooking = [...currentlyCookings, item];
     setCurrentlyCookings(newCurrentlyCooking);
     setWantToCooks(wantToCooks.filter((item) => item.recipe_id !== id));
+    const newTotalTimes = totalTimes + item.preparing_time;
+    setTotalTimes(newTotalTimes);
+
+    setTotalCalories(totalCalories + item.calories);
+
+
   };
 
   return (
@@ -55,14 +62,14 @@ function App() {
 
       <div>
         <h1 className="text-4xl font-bold text-center mt-16">Our Recipes</h1>
-        <p className="text-center mt-4 font-light">
+        <p className="text-center mt-6 font-light">
           Dive into a world of culinary delights with our extensive recipe
           collection! Whether you are a seasoned chef or a novice in the
           kitchen, our carefully curated selection of recipes offers something
           for everyone.{" "}
         </p>
 
-        <div className="flex flex-col-reverse lg:flex-row gap-10">
+        <div className="flex flex-col-reverse lg:flex-row gap-10 mt-8">
           <div className=" lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-2 mt-8">
             {recipes.map((recipe) => (
               <OurRecipe
@@ -72,7 +79,8 @@ function App() {
               ></OurRecipe>
             ))}
           </div>
-          <div className="lg:w-[40%] my-8 p-2 border rounded-xl">
+         <div className="lg:w-1/2">
+         <div className=" my-8 p-2 border rounded-xl">
             <div className="want-to-cook ">
               <h1 className=" border-b-2 text-2xl font-bold text-center ">
                 Want to cook: {wantToCooks.length}
@@ -84,11 +92,12 @@ function App() {
               </div>
 
               <div className="bg-[#28282808]">
-                {wantToCooks.map((wantToCook, idx) => (
+                {wantToCooks.map((wantToCook, index) => (
                   <WantToCook
-                    key={idx}
+                    key={index}
+                    index={index}
                     wantToCook={wantToCook}
-                    handleCurrentlyCooking={handleCurrentlyCooking}
+                    handleCurrentlyCooking={handleCurrentlyCooking} 
                   ></WantToCook>
                 ))}
               </div>
@@ -97,7 +106,7 @@ function App() {
               <h1 className=" border-b-2 text-2xl font-bold text-center  ">
                 Currently Cooking: {currentlyCookings.length}
               </h1>
-              <div className="flex ml-5  gap-20 mt-3">
+              <div className="flex ml-5 gap-8  md:gap-20 mt-3">
                 <p>Name</p>
                 <p className="">Time</p>
                 <p>Calories</p>
@@ -106,12 +115,21 @@ function App() {
                 {currentlyCookings.map((currentlyCooking, idx) => (
                   <CurrentlyCooking
                     key={idx}
+                    idx={idx}
                     currentlyCooking={currentlyCooking}
                   ></CurrentlyCooking>
                 ))}
+               
               </div>
+              <div className="flex justify-end  mt-5">
+                 <div className="space-y-2">
+                 <h1>Total Times: {totalTimes}</h1>
+                  <h1>Total Calories: {totalCalories}</h1>
+                 </div>
+                </div>
             </div>
           </div>
+         </div>
         </div>
       </div>
     <ToastContainer />

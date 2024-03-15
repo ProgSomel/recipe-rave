@@ -6,7 +6,7 @@ const OurRecipe = ({ recipe, handleWantToCook }) => {
 
   return (
     <div>
-      <div className="card h-[700px]  bg-base-100 shadow-xl border-2">
+      <div className="card h-[700px]   bg-base-100 shadow-xl border-2">
        <div className="h-[350px] p-5">
        <figure>
           <img className="rounded-lg h-full"
@@ -24,7 +24,7 @@ const OurRecipe = ({ recipe, handleWantToCook }) => {
                 ingredients.map((ingredient, idx)=> <li className="font-light" key={idx}>{ingredient}</li>)
             }
           </div>
-          <div className="flex items-center gap-5 mt-2">
+          <div className="flex  gap-2 mt-2">
           <div className="flex items-center gap-1">
           <CiTimer />
           {preparing_time} <span className="font-light">minutes</span>
