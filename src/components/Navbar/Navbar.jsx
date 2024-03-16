@@ -1,5 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-
+import manIcon from '../../../public/images/manIcon.png'
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
        </div>
         <div className="bg-[#0BE58A] w-[25px] ml-2 flex justify-center rounded-full">
-            <img className="mt-1" src="../../../public/images/manIcon.png" alt="" />
+            <img className="mt-1" src={manIcon} alt="" />
         </div>
       </div>
     </div>
