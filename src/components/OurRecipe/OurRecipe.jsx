@@ -17,9 +17,9 @@ const OurRecipe = ({ recipe, handleWantToCook }) => {
        </div>
         <div className="card-body ">
           <h2 className="card-title">{recipe_name}</h2>
-          <p className="font-light">{short_description}</p>
+          <p className="font-light pb-5 border-b-2">{short_description}</p>
           <h1 className="mt-6">Ingredients: { ingredients.length}</h1>
-          <div>
+          <div className="border-b-2 pb-4">
             {
                 ingredients.map((ingredient, idx)=> <li className="font-light" key={idx}>{ingredient}</li>)
             }
