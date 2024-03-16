@@ -7,7 +7,7 @@ const Banner = () => {
       <p className="text-white font-light">Welcome to site, where culinary inspiration meets gastronomic delight. Embark on a culinary journey like no other as we invite you to explore a treasure trove of mouthwatering recipes crafted to tantalize your taste buds and ignite your passion for cooking.</p>
       <div className="flex justify-center gap-5">
         <button className="font-bold btn rounded-full border-none bg-[#0BE58A]">Explore Now</button>
-        <button className="font-bold btn rounded-full border-none ">Our Feedback</button>
+        <button className="font-bold border border-white  btn btn-outline rounded-full text-white ">Our Feedback</button>
       </div>
       </div>
       </div>
