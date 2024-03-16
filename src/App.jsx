@@ -134,8 +134,8 @@ function App() {
               </div>
               <div className="flex justify-end  mt-5">
                  <div className="space-y-2">
-                 <h1>Total Times: {totalTimes}</h1>
-                  <h1>Total Calories: {totalCalories}</h1>
+                 <h1>Total Times: {totalTimes} Minutes</h1>
+                  <h1>Total Calories: {totalCalories} Calories</h1>
                  </div>
                 </div>
             </div>
